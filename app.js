@@ -1,15 +1,5 @@
-const Discord = require("discord.js");
-const profanities = require ('profanities')
-const sql = require("sqlite"); 
-sql.open("./credits.sqlite");
-sql.open("./score.sqlite");
-const bot = new Discord.Client();
+const Discord = require('discord.js');
 const client = new Discord.Client();
-const DAB = new Discord.Client();
-const dark = new Discord.Client();
-  
-
-
 
 client.on('ready', () => {
     console.log(`Logged in as ${client.user.tag}!`);
@@ -1185,7 +1175,6 @@ client.on('gulidmemberadd', member => {
   bot.on('guildMemberAdd', (member) => {
   member.addRole(member.guild.roles.find('name', role));
   });
-  
 
 // THIS  MUST  BE  THIS  WAY
 client.login(process.env.BOT_TOKEN);
